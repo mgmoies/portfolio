@@ -66,7 +66,9 @@ export default function Experience() {
           {experiences.map((exp, i) => (
             <div key={exp.title} className="timeline-item reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
               <div className="timeline-dot-wrap">
-                <div className={`timeline-dot ${exp.active ? 'active' : ''}`} />
+                <div className="timeline-dot">
+                  {i + 1}
+                </div>
               </div>
 
               <div className="timeline-card">

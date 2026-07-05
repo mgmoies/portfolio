@@ -76,29 +76,20 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="skills-grid reveal-stagger">
+        <div className="skills-columns reveal-stagger">
           {categories.map((cat) => (
-            <div
-              key={cat.name}
-              className="skill-category"
-            >
-              <div className="skill-category-header">
-                <div
-                  className="skill-category-icon"
-                  style={{ background: cat.iconBg, color: 'var(--color-accent)' }}
-                >
+            <div key={cat.name} className="skill-column">
+              <div className="skill-column-header">
+                <span className="skill-column-icon" style={{ color: 'var(--color-accent)' }}>
                   {cat.icon}
-                </div>
-                <div>
-                  <div className="skill-category-name">{cat.name}</div>
-                  <div className="skill-category-count">{cat.skills.length} skills</div>
-                </div>
+                </span>
+                <h3 className="skill-column-title">{cat.name}</h3>
               </div>
-              <div className="skill-list">
+              <ul className="skill-column-list">
                 {cat.skills.map((s) => (
-                  <span key={s} className="skill-pill">{s}</span>
+                  <li key={s}>{s}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
