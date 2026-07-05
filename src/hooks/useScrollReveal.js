@@ -14,8 +14,11 @@ export default function useScrollReveal() {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible')
           } else {
-            // Remove class when out of view to re-animate on scroll up/down
-            entry.target.classList.remove('visible')
+            // Only remove 'visible' class if the element is below the viewport.
+            // This ensures animations only play when scrolling down, not up.
+            if (entry.boundingClientRect.top > 0) {
+              entry.target.classList.remove('visible')
+            }
           }
         })
       },
