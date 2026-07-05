@@ -86,8 +86,13 @@ export default function Skills() {
                 <h3 className="skill-column-title">{cat.name}</h3>
               </div>
               <ul className="skill-column-list">
-                {cat.skills.map((s) => (
-                  <li key={s}>{s}</li>
+                {cat.skills.map((s, index) => (
+                  <li key={s}>
+                    <span className="tree-branch">
+                      {index === cat.skills.length - 1 ? '└── ' : '├── '}
+                    </span>
+                    {s}
+                  </li>
                 ))}
               </ul>
             </div>
