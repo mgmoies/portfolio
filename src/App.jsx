@@ -29,6 +29,9 @@ export default function App() {
 
   return (
     <>
+      <div className="ambient-glow glow-1"></div>
+      <div className="ambient-glow glow-2"></div>
+
       <div
         className="scroll-progress"
         style={{ width: `${scrollProgress}%` }}

@@ -13,7 +13,9 @@ export default function useScrollReveal() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible')
-            observer.unobserve(entry.target) // Animate only once
+          } else {
+            // Remove class when out of view to re-animate on scroll up/down
+            entry.target.classList.remove('visible')
           }
         })
       },
