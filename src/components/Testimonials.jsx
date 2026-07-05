@@ -68,7 +68,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="testimonials-layout reveal-stagger" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
+        <div className="testimonials-layout reveal-stagger" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)', width: '100%', overflow: 'hidden' }}>
           
           <div className="testimonials-selected-column reveal" style={{ padding: '0', maxWidth: '800px', margin: '0 auto' }}>
             <div key={activeIndex} className="testimonial-fade-in">
@@ -84,7 +84,7 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <div className="testimonials-marquee-wrapper" style={{ maxWidth: '800px', margin: '0 auto', borderRight: 'none', borderTop: '1px solid var(--color-border-subtle)', paddingTop: 'var(--space-8)', paddingBottom: '0' }}>
+          <div className="testimonials-marquee-wrapper" style={{ width: '100%', minWidth: 0, maxWidth: '800px', margin: '0 auto', borderRight: 'none', borderTop: '1px solid var(--color-border-subtle)', paddingTop: 'var(--space-8)', paddingBottom: '0' }}>
             <div className="testimonials-marquee">
               <div className="testimonials-track">
                 {testimonials.map((t, i) => (
